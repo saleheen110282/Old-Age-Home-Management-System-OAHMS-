@@ -10,7 +10,7 @@
             padding: 0px;
         }
     </style>
-    <link rel="stylesheet" href= "about.css">
+    <link rel="stylesheet" href= "./includes/css/about.css">
 </head>
 <body>
     <?php
@@ -22,7 +22,7 @@
     -->
 
     <div id="page-title">
-        <h1 style = "color: gray;">About</h1>
+        <h1>About</h1>
     </div>
     
 
