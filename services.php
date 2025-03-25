@@ -15,7 +15,7 @@
     <?php
         include_once('includes/nav.php');
     ?>
-    <h1>Services Page</h1>
+    <h1>Services</h1>
     
 
 
