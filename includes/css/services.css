@@ -1,0 +1,18 @@
+#div_navbar{
+    background-color: yellow;
+    width: 100vw;
+    height: 12.5vh;
+}
+
+#div_middle{
+    background-color: red;
+    width: 60vw;
+    height: 36.9vh;
+    margin: 0 0 0 120px;
+}
+
+#div_footer{
+    background-color: yellow;
+    width: 100vw;
+    height: 50.6vh;
+}
