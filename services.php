@@ -19,8 +19,10 @@
         ?>
     </div>
      <div id="div_middle">
-        <h1>Services</h1>
-        <h3>We provide world-class service for the elderly people. Good Will is now providing two services.</h3>
+        <div id="div_text">
+            <h1>Services</h1>
+            <h3>We provide world-class service for the elderly people. Good Will is now providing two services.</h3>
+        </div>    
     </div>
     <div id="div_footer">
          <?php

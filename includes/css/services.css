@@ -6,9 +6,9 @@
 
 #div_middle{
     background-color: red;
-    width: 60vw;
+    width: 100vw;
     height: 36.9vh;
-    margin: 0 0 0 120px;
+    display: grid;
 }
 
 #div_footer{
@@ -16,3 +16,15 @@
     width: 100vw;
     height: 50.6vh;
 }
+
+#div_text{
+    background-color: green;
+    width: 80vw;
+    height: 20vh;
+    margin: 20px 800px 0 200px;
+}
+
+h3{
+    margin: 20px 600px 0 50px;
+}
+
