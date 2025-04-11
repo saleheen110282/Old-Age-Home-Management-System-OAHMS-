@@ -10,6 +10,9 @@
             padding: 0px;
         }
     </style>
+    <?php
+        include_once('includes/font.php');
+    ?>
     <link rel="stylesheet" href= "./includes/css/about.css">
 </head>
 <body>

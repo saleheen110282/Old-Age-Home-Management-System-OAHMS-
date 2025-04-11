@@ -8,8 +8,12 @@
         *{
             margin: 0px;
             padding: 0px;
+            font-family: "Inria Sans", sans-serif;
         }
     </style>
+    <?php
+        include_once('includes/font.php');
+    ?>
 </head>
 <body>
     <?php
