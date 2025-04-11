@@ -12,7 +12,7 @@
         padding: 10px 0px;
         font-size: 14px;
     }
-    .fa-solid, .fa-brands{
+    footer .fa-solid, footer .fa-brands{
         font-size: 24px;
         padding-right: 10px;
     }
