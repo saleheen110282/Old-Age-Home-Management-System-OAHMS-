@@ -24,10 +24,10 @@
             <h3>We provide world-class service for the elderly people. Good Will is now providing two services.</h3>
         </div>
         <div id="div_middle_box">
-            <div id="div_middle_left">
+            <div id="div_middle_box_left">
                 Left
             </div>
-            <div id="div_middle_right">
+            <div id="div_middle_box_right">
                 Right
             </div>
         </div>
