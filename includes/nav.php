@@ -1,3 +1,6 @@
+<!-- Fontawesome CDN -->
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 <style>
     body{
         font-family: arial;
@@ -54,12 +57,12 @@
     </div>
     <div>
         <ul>
-            <li><a href="index.php">Home</a></li>
-            <li><a href="about.php">About</a></li>
-            <li><a href="services.php">Services</a></li>
-            <li><a href="notices.php">Notice</a></li>
-            <li><a href="contact.php">Contact</a></li>
-            <li><a href="login.php">Login</a></li>
+            <li><a href="index.php"><i class="fa-solid fa-house"></i> Home</a></li>
+            <li><a href="about.php"><i class="fa-regular fa-address-card"></i> About</a></li>
+            <li><a href="services.php"><i class="fa-solid fa-suitcase-medical"></i> Services</a></li>
+            <li><a href="notices.php"><i class="fa-solid fa-circle-exclamation"></i> Notice</a></li>
+            <li><a href="contact.php"><i class="fa-solid fa-id-card"></i> Contact</a></li>
+            <li><a href="login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a></li>
         </ul>
     </div>
 </nav>
