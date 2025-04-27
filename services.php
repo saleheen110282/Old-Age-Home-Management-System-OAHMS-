@@ -4,27 +4,26 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Services</title>
-    <link rel="stylesheet" href="includes\css\services.css">
     <style>
         *{
             margin: 0px;
             padding: 0px;
         }
     </style>
+    <?php
+        include_once('includes/font.php');
+    ?>
 </head>
 <body>
-    <div id="div_navbar">
-         <?php
-            include_once('includes/nav.php');
-        ?>
-    </div>
-     <div id="div_middle">
-        Middle
-    </div>
-    <div id="div_footer">
-         <?php
-            include_once('includes/footer.php');
-        ?>
-    </div>
+    <?php
+        include_once('includes/nav.php');
+    ?>
+    <h1>Services Page</h1>
+    
+
+
+    <?php
+        include_once('includes/footer.php');
+    ?>
 </body>
 </html>
