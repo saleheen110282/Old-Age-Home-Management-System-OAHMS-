@@ -19,18 +19,7 @@
         ?>
     </div>
      <div id="div_middle">
-        <div id="div_text">
-            <h1>Services</h1>
-            <h3>We provide world-class service for the elderly people. Good Will is now providing two services.</h3>
-        </div>
-        <div id="div_middle_box">
-            <div id="div_middle_box_left">
-                Left
-            </div>
-            <div id="div_middle_box_right">
-                Right
-            </div>
-        </div>
+        Middle
     </div>
     <div id="div_footer">
          <?php

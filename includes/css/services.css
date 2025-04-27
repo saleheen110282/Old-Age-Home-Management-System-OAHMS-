@@ -3,43 +3,8 @@
     height: 12.5vh;
 }
 
-#div_middle{
-    width: 100vw;
-    height: 36.9vh;
-    display: grid;
-    background-color: red;
-}
 
 #div_footer{
     width: 100vw;
     height: 50.6vh;
 }
-
-#div_text{
-    width: 80vw;
-    height: 20vh;
-    margin: 20px 800px 0 200px;
-}
-
-h3{
-    margin: 20px 350px 0 50px;
-}
-#div_middle_box{
-    /* display: flex; */
-    background-color: green;
-    width: 100vw;
-    height: 40vh;
-}
-#div_middle_box_left{
-    width: 20vw;
-    height: 16.9vh;
-    background-color: red;
-    /* display: flex; */
-}
-#div_middle_box_right{
-    width: 20vw;
-    height: 16.9vh;
-    background-color: blue;
-    /* display: flex; */
-}
-
