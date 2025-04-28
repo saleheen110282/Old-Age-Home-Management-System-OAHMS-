@@ -23,28 +23,52 @@
     <div id="div_bottom">
         <div id="div_bottom_left">
             <div id="free_box">
-                <table class="table_text">
-                    <tr>
-                        <td class="hedding_text">Free</td>
-                    </tr>
-                    <tr>
-                        <td></td>
-                    </tr>
-                </table>
+                <div class="paid_type">Free</div>
+                    <div class="features">
+                        <table>
+                            <tr>
+                                <td class="feature-item">Accommodation</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-item">Food</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-item">Laundry</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-item">Medical Facilities</td>
+                            </tr>
+                            <tr>
+                                <td class="feature-item">Share Assistant</td>
+                            </tr>
+                        </table>
+                    </div>
                 <button class="btn">Start</button>
             </div>
         </div>
         <div id="div_bottom_right">
             <div id="paid_box">
+                <div class="paid_type">Paid</div>
+            <div class="features">
                 <table>
                     <tr>
-                        <td class="hedding_text">Paid</td></td>
+                        <td class="feature-item">Accommodation<p id="sub-text">(Air Condition and Room Heating)</p></td>
                     </tr>
                     <tr>
-                        <td></td>
+                        <td class="feature-item">Food</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-item">Laundry</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-item">Medical Facilities</td>
+                    </tr>
+                    <tr>
+                        <td class="feature-item">Dedicated Assistant</td>
                     </tr>
                 </table>
-                <button class="btn">Start</button>
+            </div>
+            <button class="btn">Start</button>
             </div>
         </div>
     </div>
