@@ -63,7 +63,7 @@
         <button class="page">3</button>
         <button>Next</button>
     </div>
-
+    <!-- Test purpose. -->
     <?php
         include_once('includes/footer.php');
     ?>
