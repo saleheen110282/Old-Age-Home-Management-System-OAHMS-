@@ -1,0 +1,105 @@
+#div_top_text{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  font-size: 40px;
+  margin-top: 3%;
+  margin-left: 12%;
+}
+#div_top_paragraph{
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: auto;
+  font-size: 20px;
+  margin-top: 2%;
+  margin-left: 15%;
+}
+
+.container {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 5% 0 5% 0;
+}
+
+.notices {
+  display: grid;
+  grid-template-columns: repeat(2, 200px);
+  gap: 30px;
+}
+
+.notice-card {
+  background: #e0e0e0;
+  padding: 20px;
+  border-radius: 8px;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.notice-card.active {
+  border: 2px solid #007BFF;
+  background: #f0f8ff;
+}
+
+.date {
+  font-size: 14px;
+  color: #555;
+  margin-bottom: 10px;
+}
+
+.title {
+  font-weight: bold;
+  font-size: 16px;
+}
+
+.pinned-notice {
+  background: #e0e0e0;
+  padding: 20px;
+  width: 200px;
+  border-radius: 8px;
+  position: relative;
+}
+
+.pin-icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  font-size: 20px;
+}
+
+.pinned-title {
+  font-weight: bold;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 30px;
+  gap: 15px;
+  margin-bottom: 10px;
+}
+
+.pagination button,
+.pagination .page {
+  background: #e0e0e0;
+  border: none;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.pagination button:hover,
+.pagination .page:hover {
+  background: #d0d0d0;
+}
+
+.pagination .page.active {
+  background: #007BFF;
+  color: white;
+}
+
+.pagination button:disabled {
+  opacity: 0.5;
+  cursor: default;
+}
