@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Login | Good Will Old Age Home</title>
+    <link rel="stylesheet" href="includes/css/login.css">
     <style>
         *{
             margin: 0px;
@@ -15,7 +16,50 @@
     <?php
         include_once('includes/nav.php');
     ?>
-    <h1>Login Page</h1>
+
+
+    <section class="login-section">
+
+    <img src="assets/img/EW.jpg" alt="Elderly walking" class="background-img">
+
+    <div class="login-box">
+
+    <h2>Login</h2>
+
+    <form>
+
+        <label>Email</label>
+
+        <input type="email" placeholder="Enter your Email">
+
+        
+
+        <label>Password</label>
+
+        <input type="password" placeholder="Enter your password">
+
+        
+
+        <p><a href="#">Apply for a seat</a></p>
+
+        
+
+        <button type="submit">Login</button>
+
+    </form>
+
+    </div>
+
+    </section>
+
+
+<?php
+
+    include_once('includes/footer.php');
+
+?>
+
+</body>
 
 
     <?php

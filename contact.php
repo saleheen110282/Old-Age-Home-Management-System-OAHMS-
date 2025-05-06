@@ -16,7 +16,7 @@
         include_once('includes/nav.php');
     ?>
     <h1>Contact Page</h1>
-
+    
 
     <?php
         include_once('includes/footer.php');
