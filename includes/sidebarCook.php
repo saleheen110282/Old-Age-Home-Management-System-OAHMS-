@@ -10,25 +10,30 @@
     }
     #sidebar > #logoandname{
         display : flex;
-        justify-content : space-around;
+        justify-content : space-evenly;
+        line-height : 25px;
     }
     #sidebar > #logoandname > #logo > img{
         height : 60px;
         weight : 100px;
     }
-    #sidebar > #logoandname > #name{        
-        font-size : 20px;
+    #sidebar > #logoandname > #name{ 
+        margin-top : 7px;       
+        font-size : 16px;
     }
     #nav{
         margin : 50px 0px 0px 0px;
     }
     #nav > div{
-        font-size : 20px;
-        padding : 10px 0px 10px 50px;
+        font-size : 16px;
+        padding : 15px 0px 15px 50px;
     }
     #nav > div > a{
         color : #eeeeee;
         text-decoration : none;
+    }
+    .hr-line{
+        border: 1px solid #3A2A68;
     }
 </style>
 
@@ -43,10 +48,10 @@
     </div>
     <div id="nav">
         <div><a href="#">Dashboard</a></div>
-        <hr>
+        <hr class="hr-line">
         <div><a href="#">Food Request</a></div>
-        <hr>
+        <hr class="hr-line">
         <div><a href="#">Complain Box</a></div>
-        <hr>
+        <hr class="hr-line">
     </div>
 </div>

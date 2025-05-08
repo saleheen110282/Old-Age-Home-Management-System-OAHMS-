@@ -10,23 +10,23 @@
     }
     #sidebar > #logoandname{
         display : flex;
-        justify-content : space-around;
+        justify-content : space-evenly;
+        line-height : 25px;
     }
     #sidebar > #logoandname > #logo > img{
         height : 60px;
         weight : 100px;
     }
-    #sidebar > #logoandname > #name{        
-        font-size : 20px;
+    #sidebar > #logoandname > #name{ 
+        margin-top : 7px;       
+        font-size : 16px;
     }
     #nav{
         margin : 50px 0px 0px 0px;
     }
     #nav > div{
-        font-size : 20px;
-        height : 35px;
-        width : 100%;
-        padding-left : 50px;
+        font-size : 16px;
+        padding : 15px 0px 15px 50px;
     }
     #nav > div > a{
         color : #eeeeee;
@@ -34,8 +34,15 @@
     }
     #nav > .sublist{
         font-size : 14px;
-        height : 25px;
-        padding-left : 80px;
+        height : 45px;
+        padding : 10px 80px 0px;
+        background-color : #3A2468;
+    }
+    .hr-line{
+        border: 1px solid #3A2A68;
+    }
+    .sub-hr-line{
+        border : 1px solid #180E2F;
     }
 </style>
 
@@ -50,20 +57,20 @@
     </div>
     <div id="nav">
         <div><a href="#">Dashboard</a></div>
-        <hr>
+        <hr class="hr-line">
         <div><a href="#">Pages</a></div>
-        <hr>
+        <hr class="sub-hr-line">
         <div class="sublist">Home</div>
-        <hr>
+        <hr class="sub-hr-line">
         <div class="sublist">About Us</div>
-        <hr>
+        <hr class="sub-hr-line">
         <div class="sublist">Contact Us</div>
-        <hr>
+        <hr class="sub-hr-line">
         <div class="sublist">See More > </div>
-        <hr>
+        <hr class="sub-hr-line">
         <div><a href="#">Services</a></div>
-        <hr>
+        <hr class="hr-line">
         <div><a href="#">Complain Box</a></div>
-        <hr>
+        <hr class="hr-line">
     </div>
 </div>
