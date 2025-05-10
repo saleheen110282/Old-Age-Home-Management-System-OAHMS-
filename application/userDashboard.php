@@ -30,11 +30,11 @@
         display: flex;
         justify-content: space-between;
         align-items: center;
+        color: #5A5454;
     }
 
     .dashboard h1 {
         font-size: 40px;
-        color: #333;
     }
 
     .profile {
