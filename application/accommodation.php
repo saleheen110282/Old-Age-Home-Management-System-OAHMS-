@@ -18,11 +18,14 @@
 
     #right {
         background-color: #eeeeee;
+        height: 100vh;
+        overflow: scroll;
     }
 
     #main {
         /* height: 93vh; */
-        margin: 100px 60px;
+        margin: 0 60px;
+        margin-top: 20px;
     }
 
     .accomm {
