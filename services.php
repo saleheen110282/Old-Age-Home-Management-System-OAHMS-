@@ -52,7 +52,7 @@
             <div class="features">
                 <table>
                     <tr>
-                        <td class="feature-item">Accommodation<p id="sub-text">(Air Condition and Room Heating)</p></td>
+                        <td class="feature-item">Accommodation<p id="sub-text"><br>(Air Condition and Room Heating)</p></td>
                     </tr>
                     <tr>
                         <td class="feature-item">Food</td>
