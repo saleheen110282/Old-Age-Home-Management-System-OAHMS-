@@ -19,11 +19,13 @@
 
     #right {
         background-color: #eeeeee;
+        height: 100vh;
+        overflow: scroll;
     }
 
     #main {
         /* height: 93vh; */
-        margin: 100px 60px;
+        margin: 20px 60px;
     }
 
     .dashboard {
