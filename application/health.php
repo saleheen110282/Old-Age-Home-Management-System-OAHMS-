@@ -18,12 +18,14 @@
 
     #right {
         background-color: #eeeeee;
+        height: 100vh;
+        overflow: scroll;
     }
 
     #main {
         /* height: 93vh; */
         margin: 0 60px;
-        margin-top: 100px;
+        margin-top: 20px;
         color: #5A5454;
     }
 
@@ -56,7 +58,7 @@
     }
 
     .health-container {
-        padding: 80px 40px;
+        padding: 40px 40px;
         display: flex;
         gap: 40px;
         justify-content: space-between;
@@ -136,42 +138,42 @@
                 </div>
                 <div class="new-medecine">
                     <h2>Add New Medicine</h2>
-                    <div style="display: flex; gap: 20px; margin-top: 15px;">
+                    <div style="display: flex; gap: 10px; margin-top: 10px;">
                         <input type="text" placeholder="Name of Medicine"
-                            style="padding: 8px 15px; border: 1px solid #ccc; border-radius: 5px; font-size: 18px; flex: 1; outline: none;">
+                            style="padding: 6px 10px; border: 1px solid #ccc; border-radius: 4px; font-size: 14px; flex: 1; outline: none;">
                         <button
-                            style="background-color: #472B7E; color: white; border: none; padding: 8px 25px; border-radius: 5px; cursor: pointer; font-size: 18px; transition: background-color 0.3s;">Add</button>
+                            style="background-color: #472B7E; color: white; border: none; padding: 6px 15px; border-radius: 4px; cursor: pointer; font-size: 14px; transition: background-color 0.3s;">Add</button>
                     </div>
-                    <div style="display: flex; gap: 20px; margin-top: 15px; justify-content: space-between;">
-                        <div style="flex: 1; padding: 15px; border: 1px solid #ddd; border-radius: 5px; background-color: #f9f9f9;">
-                            <div style="margin-bottom: 15px;">
-                                <input type="checkbox" name="time_breakfast" id="breakfast" style="margin-right: 8px; transform: scale(1.2);">
-                                <label for="breakfast" style="font-size: 18px; font-weight: 500;">Breakfast</label>
-                                <div style="margin-top: 8px; margin-left: 25px;">
-                                    <input type="radio" name="breakfast_time" id="breakfast_before" style="margin-right: 5px;">
-                                    <label for="breakfast_before" style="margin-right: 15px;">Before</label>
-                                    <input type="radio" name="breakfast_time" id="breakfast_after" style="margin-right: 5px;">
-                                    <label for="breakfast_after">After</label>
+                    <div style="display: flex; gap: 10px; margin-top: 10px; justify-content: space-between;">
+                        <div style="flex: 1; padding: 10px; border: 1px solid #ddd; border-radius: 4px; background-color: #f9f9f9;">
+                            <div style="margin-bottom: 10px;">
+                                <input type="checkbox" name="time_breakfast" id="breakfast" style="margin-right: 5px; transform: scale(1);">
+                                <label for="breakfast" style="font-size: 14px; font-weight: 500;">Breakfast</label>
+                                <div style="margin-top: 5px; margin-left: 15px;">
+                                    <input type="radio" name="breakfast_time" id="breakfast_before" style="margin-right: 3px;">
+                                    <label for="breakfast_before" style="margin-right: 10px; font-size: 13px;">Before</label>
+                                    <input type="radio" name="breakfast_time" id="breakfast_after" style="margin-right: 3px;">
+                                    <label for="breakfast_after" style="font-size: 13px;">After</label>
                                 </div>
                             </div>
-                            <div style="margin-bottom: 15px;">
-                                <input type="checkbox" name="time_lunch" id="lunch" style="margin-right: 8px; transform: scale(1.2);">
-                                <label for="lunch" style="font-size: 18px; font-weight: 500;">Lunch</label>
-                                <div style="margin-top: 8px; margin-left: 25px;">
-                                    <input type="radio" name="lunch_time" id="lunch_before" style="margin-right: 5px;">
-                                    <label for="lunch_before" style="margin-right: 15px;">Before</label>
-                                    <input type="radio" name="lunch_time" id="lunch_after" style="margin-right: 5px;">
-                                    <label for="lunch_after">After</label>
+                            <div style="margin-bottom: 10px;">
+                                <input type="checkbox" name="time_lunch" id="lunch" style="margin-right: 5px; transform: scale(1);">
+                                <label for="lunch" style="font-size: 14px; font-weight: 500;">Lunch</label>
+                                <div style="margin-top: 5px; margin-left: 15px;">
+                                    <input type="radio" name="lunch_time" id="lunch_before" style="margin-right: 3px;">
+                                    <label for="lunch_before" style="margin-right: 10px; font-size: 13px;">Before</label>
+                                    <input type="radio" name="lunch_time" id="lunch_after" style="margin-right: 3px;">
+                                    <label for="lunch_after" style="font-size: 13px;">After</label>
                                 </div>
                             </div>
                             <div>
-                                <input type="checkbox" name="time_dinner" id="dinner" style="margin-right: 8px; transform: scale(1.2);">
-                                <label for="dinner" style="font-size: 18px; font-weight: 500;">Dinner</label>
-                                <div style="margin-top: 8px; margin-left: 25px;">
-                                    <input type="radio" name="dinner_time" id="dinner_before" style="margin-right: 5px;">
-                                    <label for="dinner_before" style="margin-right: 15px;">Before</label>
-                                    <input type="radio" name="dinner_time" id="dinner_after" style="margin-right: 5px;">
-                                    <label for="dinner_after">After</label>
+                                <input type="checkbox" name="time_dinner" id="dinner" style="margin-right: 5px; transform: scale(1);">
+                                <label for="dinner" style="font-size: 14px; font-weight: 500;">Dinner</label>
+                                <div style="margin-top: 5px; margin-left: 15px;">
+                                    <input type="radio" name="dinner_time" id="dinner_before" style="margin-right: 3px;">
+                                    <label for="dinner_before" style="margin-right: 10px; font-size: 13px;">Before</label>
+                                    <input type="radio" name="dinner_time" id="dinner_after" style="margin-right: 3px;">
+                                    <label for="dinner_after" style="font-size: 13px;">After</label>
                                 </div>
                             </div>
                         </div>
