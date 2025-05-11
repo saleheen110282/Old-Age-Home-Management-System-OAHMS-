@@ -18,11 +18,13 @@
 
     #right {
         background-color: #eeeeee;
+        height: 100vh;
+        overflow: scroll;
     }
 
     #main {
         /* height: 93vh; */
-        margin: 100px 60px;
+        margin: 20px 60px;
         color: #5A5454;
     }
 
@@ -55,7 +57,7 @@
     }
 
     .food-container {
-        padding: 60px 0;
+        padding: 20px 0;
         display: flex;
         gap: 40px;
         justify-content: space-between;
@@ -76,12 +78,10 @@
     .breakfast {
         padding: 20px;
         border-bottom: 2px solid rgb(92, 86, 86);
-        /* margin-bottom: 50px; */
     }
 
     .dinner {
         padding: 20px;
-        /* border-right: 2px solid rgb(92, 86, 86); */
     }
 
     .lunch .top {
@@ -134,7 +134,7 @@
                     </div>
                 </div>
                 <div class="food-container">
-                    <div id="left">
+                    <div id="left-container">
                         <div class="breakfast">
                             <h2>Break Fast</h2>
                             <input type="radio" id="rice_egg" name="breakfast" value="Rice and Egg">
@@ -166,7 +166,7 @@
                             </div>
                         </div>
                     </div>
-                    <div id="right">
+                    <div id="right-container">
                         <div class="lunch">
                             <div class="top">
                                 <h2>Lunch</h2>
