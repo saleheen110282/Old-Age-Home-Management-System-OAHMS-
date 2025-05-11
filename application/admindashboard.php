@@ -18,10 +18,6 @@
 
     #right {
         background-color: #eeeeee;
-    }
-
-    #right {
-        background-color: #eeeeee;
         height: 100vh;
         overflow: scroll;
     }
