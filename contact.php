@@ -12,8 +12,6 @@
     padding: 0px;
   }
   </style>
-</head>
-
 <body>
   <?php
         include_once('includes/nav.php');
@@ -44,7 +42,6 @@
       </div>
     </div>
   </div>
-
     <?php
         include_once('includes/footer.php');
     ?> 

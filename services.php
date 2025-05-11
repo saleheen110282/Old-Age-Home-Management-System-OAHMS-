@@ -11,6 +11,9 @@
             padding: 0px;
         }
     </style>
+    <?php
+        include_once('includes/font.php');
+    ?>
 </head>
 <body>
     <?php
