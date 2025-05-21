@@ -15,17 +15,85 @@
         }
         #right{
             background-color : #eeeeee;
+            height: 100vh;
         }
         #main{ 
-            height : 93vh;
+            height : 90vh;
         }
-
-        /**
-            Your CSS code goes here..
-        */
-
-
-
+        #main_box{
+            margin: 20px 50px;
+            color: #5A5454;
+        }
+        .page_top{
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #5A5454;
+        }
+        .page_top h1{
+            font-size: 40px;
+        }
+        .profile{
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .profile img{
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-left: 30px;
+        }
+        .profile p{
+            font-size: 20px;
+        }
+        #edit-profile{
+            display: flex;
+        }
+        #edit-profile img{
+            width: 110px;
+            height: 110px;
+            border-radius: 50%;
+        }
+        #edit-profile p{
+            font-size: 30px;
+            margin: 2% 0 0 2%;
+        }
+        #edit-profile a{
+            font-size: 20px;
+            margin: 2% 0 0 2%;
+        }
+        #div_bottom{
+            width: 90%;
+            height: 45vh;
+        }
+        #div_left{
+            float: left;
+            width: 18%;
+            height: 45vh;
+            font-size: 30px;
+            margin-top: 5%;
+            margin-left: 25%;
+        }
+        #div_right{
+            float: right;
+            width: 30%;
+            height: 45vh;
+            font-size: 30px;
+            margin-top: 5%;
+            margin-right: 15%;
+        }
+        td{
+            padding-bottom: 17px;
+        }
+        .btn{
+            width: 180px;
+            height: 60px;
+            border: 0;
+            background-color : #eeeeee;
+            font-size: 20px;
+            margin: 1% 0 0 7%;
+        }
     </style>
 </head>
 <body>
@@ -36,15 +104,69 @@
 
     <div id="right">
         <div id="main">
+            <div id="main_box">
+                <div class="page_top">
+                    <h1>My Profile</h1>
+                    <div class="profile">
+                        <p>Hi, Admin!</p>
+                        <img src="../assets/img/profile.png" alt="">
+                    </div>
+                </div>
+                <div style="text-align: right; margin: 20px 0;padding-right: 60px; padding-top: 50px;">
+                        <button style="background-color: #472B7E; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; display: inline-flex; align-items: center;">
+                        <i class="fa-solid fa-pen" style="margin-right: 5px;"></i>Edit Profile
+                        </button>
+                </div>
 
-        <!-- 
-        Your HTML code goes here..
-        Please make sure that you write html code only in here..
-        -->
+                <div id="edit-profile">
+                    <img src="../assets/img/profile.png" alt="">
+                    <p>David Truman<br><a>ID: 13254</a></p>
+                </div>
 
-        
-
+                <div id="div_bottom" >
+                    <div id="div_left">
+                        <table>
+                            <tr>
+                                <td>Age</td>
+                            </tr>
+                            <tr>
+                                <td>Nationality</td>
+                            </tr>
+                            <tr>
+                                <td>Ex. Profession</td>
+                            </tr>
+                            <tr>
+                                <td>Email</td>
+                            </tr>
+                            <tr>
+                                <td>Spouse</td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div id="div_right">
+                        <table>
+                            <tr>
+                                <td>: 65</td>
+                            </tr>
+                            <tr>
+                                <td>: America</td>
+                            </tr>
+                            <tr>
+                                <td>: Software Energineer</td>
+                            </tr>
+                            <tr>
+                                <td>: david3342@gmail.com</td>
+                            </tr>
+                            <tr>
+                                <td>: Ms. Jennifer (Alive)</td>
+                            </tr>
+                        </table>
+                        <button type="submit" class="btn">View incidents &gt;</button>
+                    </div>
+                </div>
+            </div>
         </div>
+
         <div id="footer">
         <?php
                 include_once('../includes/applicationfooter.php');
