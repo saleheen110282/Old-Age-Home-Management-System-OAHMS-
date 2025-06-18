@@ -115,7 +115,7 @@
             <h1>Cook Dashboard</h1>
             <div class="profile">
                 <span>Hi Cook!</span>
-                <img src="oldman.png" alt="Cook Image">
+                <img src="../assets/img/profile.png" alt="Cook Image">
             </div>
             </div>
 

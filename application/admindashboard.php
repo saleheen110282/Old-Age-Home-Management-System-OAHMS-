@@ -1,3 +1,20 @@
+<?php
+include "../includes/config.php";
+session_start();
+
+if (!isset($_SESSION['userid'])) {
+    header("Location: ../login.php");
+    exit;
+}
+// echo $_SESSION['userid'];
+if (isset($_POST['submit'])) {
+    $id = $_SESSION['userid']; 
+    $sql = "UPDATE myuser SET emergency = 1 WHERE userid = '$id'";
+    mysqli_query($conn, $sql);
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -114,13 +131,16 @@
                     <h1>Admin Dashboard</h1>
                     <div class="profile">
                         <p>Hi, Admin!</p>
-                        <img src="../assets/img/profile.png" alt="">
+                        <img src="../assets/img/profile.png" alt="" id="profileImg" style="cursor: pointer;">
                     </div>
                 </div>
+                <?php
+                    include_once('../includes/menu.php');
+                ?>
                 <div style="display: flex; justify-content: flex-end; margin: 20px 30px 0;">
                     <div style="position: relative; display: flex; align-items: center;">
-                        <input type="text" placeholder="Search By ID." name="" id="" style="padding: 10px 15px; border-radius: 5px; border: 1px solid #ccc; width: 250px;">
-                        <i class="fa-solid fa-magnifying-glass" style="position: absolute; right: 15px; color: #666;"></i>
+                        <input type="text" placeholder="Search By ID." name="" id="" style="z-index: 1; padding: 10px 15px; border-radius: 5px; border: 1px solid #ccc; width: 250px;">
+                        <i class="fa-solid fa-magnifying-glass" style="z-index: 1; position: absolute; right: 15px; color: #666;"></i>
                     </div>
                 </div>
                 <div class="card-container">

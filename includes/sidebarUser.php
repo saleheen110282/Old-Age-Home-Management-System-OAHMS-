@@ -48,15 +48,15 @@
             </div>
         </div>
         <div id="nav">
-            <div><a href="#"><i class="fa-solid fa-table-columns"></i> Dashboard</a></div>
+            <div><a href="userDashboard.php"><i class="fa-solid fa-table-columns"></i> Dashboard</a></div>
             <hr class="hr-line">
-            <div><a href="#"><i class="fa-solid fa-bed"></i> Accommodation</a></div>
+            <div><a href="accommodation.php"><i class="fa-solid fa-bed"></i> Accommodation</a></div>
             <hr class="hr-line">
-            <div><a href="#"><i class="fa-solid fa-utensils"></i> Food</a></div>
+            <div><a href="food.php"><i class="fa-solid fa-utensils"></i> Food</a></div>
             <hr class="hr-line">
-            <div><a href="#"><i class="fa-solid fa-heart"></i> Health</a></div>
+            <div><a href="health.php"><i class="fa-solid fa-heart"></i> Health</a></div>
             <hr class="hr-line">
-            <div><a href="#"><i class="fa-solid fa-list-ol"></i> Complain Box</a></div>
+            <div><a href="complainbox.php"><i class="fa-solid fa-list-ol"></i> Complain Box</a></div>
             <hr class="hr-line">
         </div>
     </div>

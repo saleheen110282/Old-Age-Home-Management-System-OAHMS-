@@ -1,3 +1,41 @@
+<?php
+include "includes/config.php";
+session_start();
+
+if (isset($_POST['submit'])) {
+    $email    = $_POST['email'];
+    $password = $_POST['password'];
+
+    $sql = "SELECT * FROM myuser WHERE email='$email' AND userpassword='$password'";
+    $result = mysqli_query($conn, $sql);
+
+    if (mysqli_num_rows($result) == 1) {
+        $row = mysqli_fetch_assoc($result);
+        $_SESSION['userid'] = $row['userid'];
+        $id = $_SESSION['userid'];
+        $sql = "SELECT role FROM myuser WHERE userid='$id'";
+        $result = mysqli_query($conn, $sql);
+        $row = mysqli_fetch_assoc($result);
+        $role = $row['role'];
+        if($role == "resident"){
+            header("Location: /Old-Age-Home-Management-System-OAHMS-/application/userDashboard.php");
+            exit();
+        }
+        else if($role == "admin"){
+            header("Location: /Old-Age-Home-Management-System-OAHMS-/application/adminDashboard.php");
+            exit();
+        }
+        else if($role == "cook"){
+            header("Location: /Old-Age-Home-Management-System-OAHMS-/application/cookDashboard.php");
+            exit();
+        }
+    } else {
+        echo "Invalid email or password.";
+    }
+}
+?>
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -30,17 +68,17 @@
 
     <h2>Login</h2>
 
-    <form>
+    <form method="post">
 
         <label>Email</label>
 
-        <input type="email" placeholder="Enter your Email">
+        <input type="email" name="email" placeholder="Enter your Email">
 
         
 
         <label>Password</label>
 
-        <input type="password" placeholder="Enter your password">
+        <input type="password" name="password" placeholder="Enter your password">
 
         
 
@@ -48,7 +86,7 @@
 
         
 
-        <button type="submit">Login</button>
+        <button type="submit" name="submit">Login</button>
 
     </form>
 
