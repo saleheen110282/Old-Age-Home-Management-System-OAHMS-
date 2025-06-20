@@ -146,8 +146,8 @@ if (isset($_POST['submit'])) {
                         </div>
                     </a>
                     <div class="card card3">
-                        <p>Day</p>
-                        <h2><i class="fa-solid fa-smog"></i>&nbsp;<span id="clock"></span></h2>
+                        <p>Time</p>
+                        <h2><i class="fa-solid fa-clock"></i>&nbsp;<span id="clock"></span></h2>
                     </div>
                     <div class="card card4">
                         <p>Emergency Situation</p>
@@ -200,7 +200,7 @@ if (isset($_POST['submit'])) {
             });
     }
 
-    setInterval(updateTime, 60000);
+    setInterval(updateDate, 60000);
     updateDate(); 
 </script>
 
