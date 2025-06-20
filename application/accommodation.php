@@ -98,7 +98,7 @@
                     <p><i class="fa-solid fa-house-chimney"></i> Accommodation Type: Free</p>
                 </div>
                 <div>
-                    <a href="#" style="display: block; width: fit-content; margin-left: auto; margin-right: 55px; padding: 10px 20px; color: #5A5454; cursor: pointer; text-decoration: none; font-size:20px">Change Your Plan <i class="fa-solid fa-caret-right"></i></a>
+                    <a href="../services.php" style="display: block; width: fit-content; margin-left: auto; margin-right: 55px; padding: 10px 20px; color: #5A5454; cursor: pointer; text-decoration: none; font-size:20px">Change Your Plan <i class="fa-solid fa-caret-right"></i></a>
                 </div>
             </div>
             <div id="footer">

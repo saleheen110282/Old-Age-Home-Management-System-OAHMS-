@@ -1,3 +1,19 @@
+<?php
+include "../includes/config.php";
+session_start();
+
+if (!isset($_SESSION['userid'])) {
+    header("Location: ../login.php");
+    exit;
+}
+// echo $_SESSION['userid'];
+if (isset($_POST['submit'])) {
+    $id = $_SESSION['userid']; 
+    $sql = "UPDATE myuser SET emergency = 1 WHERE userid = '$id'";
+    mysqli_query($conn, $sql);
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -105,31 +121,55 @@
                 <div class="dashboard">
                     <h1>Dashboard</h1>
                     <div class="profile">
-                        <p>Hi, David!</p>
-                        <img src="../assets/img/profile.png" alt="">
+                        <p>Hi, <?php 
+                            $id = $_SESSION['userid'];
+                            $sql = "SELECT username FROM myuser WHERE userid='$id'";
+                            $result = mysqli_query($conn, $sql);
+                            $row = mysqli_fetch_assoc($result);
+                            echo $row['username'];
+                        ?>!</p>
+                        <img src="../assets/img/profile.png" alt="" id="profileImg" style="cursor: pointer;">
                     </div>
                 </div>
+                <?php
+                    include_once('../includes/menu.php');
+                ?>
                 <div class="card-container">
                     <div class="card card1">
                         <p>Date</p>
-                        <h2><i class="fa-solid fa-calendar"></i> 12/03/25</h2>
+                        <h2><i class="fa-solid fa-calendar"></i>&nbsp;<span id="date"></span></h2>
                     </div>
-                    <div class="card card2">
-                        <p>Notice</p>
-                        <h2><i class="fa-solid fa-circle-exclamation"></i></i> Latest</h2>
-                    </div>
+                    <a href="../notices.php" style="text-decoration: none;">
+                        <div class="card card2">
+                            <p>Notice</p>
+                            <h2><i class="fa-solid fa-circle-exclamation"></i></i> Latest</h2>
+                        </div>
+                    </a>
                     <div class="card card3">
-                        <p>Day</p>
-                        <h2><i class="fa-solid fa-smog"></i></i> Tuesday</h2>
+                        <p>Time</p>
+                        <h2><i class="fa-solid fa-clock"></i>&nbsp;<span id="clock"></span></h2>
                     </div>
                     <div class="card card4">
                         <p>Emergency Situation</p>
-                        <h2><i class="fa-solid fa-bell"></i> No</h2>
+                        <h2><i class="fa-solid fa-bell"></i> 
+                            <?php
+                                $id = $_SESSION['userid'];
+                                $sql = "SELECT emergency FROM myuser WHERE userid= 31";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                if($row['emergency'] == 0){
+                                    echo "No";
+                                }
+                                else{
+                                    echo "Yes<br><p style='font-size: 16px; color: red;'>Please go to the admin office immediately!!!</p>";
+                                }
+                            ?>
+                        </h2>
                     </div>
                 </div>
                 <div>
                     <div style="display: flex; justify-content: flex-end; padding: 0 40px; margin-top: 20px;">
-                        <button style="background-color: #472B7E; color: white; border: none; border-radius: 5px; padding: 12px 24px; font-size: 16px; font-weight: bold; cursor: pointer;">Emergency Help</button>
+                        <button type="submit" name="submit" style="background-color: #472B7E; color: white; border: none; border-radius: 5px; padding: 12px 24px; font-size: 16px; font-weight: bold; cursor: pointer;">Emergency Help</button>
                     </div>
                 </div>
             </div>
@@ -141,6 +181,28 @@
         </div>
     </div>
 
+<script>
+    function updateTime() {
+        fetch('../includes/time.php')
+            .then(response => response.text())
+            .then(time => {
+                document.getElementById("clock").innerText = time;
+            });
+    }
+
+    setInterval(updateTime, 1000);
+    updateDate(); 
+    function updateDate() {
+        fetch('../includes/date.php')
+            .then(response => response.text())
+            .then(date => {
+                document.getElementById("date").innerText = date;
+            });
+    }
+
+    setInterval(updateDate, 60000);
+    updateDate(); 
+</script>
 
 
 </body>

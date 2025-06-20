@@ -1,3 +1,13 @@
+<?php
+include "../includes/config.php";
+session_start();
+
+if (!isset($_SESSION['userid'])) {
+    header("Location: ../login.php");
+    exit;
+}
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -109,9 +119,12 @@
                     <h1>My Profile</h1>
                     <div class="profile">
                         <p>Hi, Admin!</p>
-                        <img src="../assets/img/profile.png" alt="">
+                        <img src="../assets/img/profile.png" alt="" id="profileImg" style="cursor: pointer;">
                     </div>
                 </div>
+                <?php
+                    include('../includes/menu.php');
+                ?>
                 <div style="text-align: right; margin: 20px 0;padding-right: 60px; padding-top: 50px;">
                         <button style="background-color: #472B7E; color: white; padding: 10px 15px; border: none; border-radius: 5px; cursor: pointer; display: inline-flex; align-items: center;">
                         <i class="fa-solid fa-pen" style="margin-right: 5px;"></i>Edit Profile
@@ -120,7 +133,19 @@
 
                 <div id="edit-profile">
                     <img src="../assets/img/profile.png" alt="">
-                    <p>David Truman<br><a>ID: 13254</a></p>
+                    <p>
+                        <?php
+                            $id = $_SESSION['userid'];
+                            $sql = "SELECT name FROM myuser WHERE userid='$id'";
+                            $result = mysqli_query($conn, $sql);
+                            $row = mysqli_fetch_assoc($result);
+                            echo  $row['name'];
+                        ?>
+                    <br>
+                        <?php
+                            echo "ID: ", 1000 + $_SESSION['userid'];
+                        ?>
+                    </p>
                 </div>
 
                 <div id="div_bottom" >
@@ -139,7 +164,7 @@
                                 <td>Email</td>
                             </tr>
                             <tr>
-                                <td>Spouse</td>
+                                <td>Core Of</td>
                             </tr>
                         </table>
                     </div>
