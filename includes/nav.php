@@ -62,7 +62,14 @@
             <li><a href="services.php"><i class="fa-solid fa-suitcase-medical"></i> Services</a></li>
             <li><a href="notices.php"><i class="fa-solid fa-circle-exclamation"></i> Notice</a></li>
             <li><a href="contact.php"><i class="fa-solid fa-id-card"></i> Contact</a></li>
-            <li><a href="login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a></li>
+            <?php
+                if(!isset($_SESSION['userid'])){
+                    echo '<li><a href="login.php"><i class="fa-solid fa-arrow-right-to-bracket"></i> Login</a></li>';
+                }
+                else{
+                    echo '<a href="./application/userDashboard.php" style="text-decoration: none; line-height: 50px; text-align: center; height: 50px; width: 130px; margin-top: -10px; margin-right: 30px; border-radius: 10px; background-color: #F24822; color: white;">Dashboard</a>';
+                }
+            ?>
         </ul>
     </div>
 </nav>

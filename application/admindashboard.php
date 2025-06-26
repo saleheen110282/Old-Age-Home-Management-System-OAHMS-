@@ -146,7 +146,15 @@ if (isset($_POST['submit'])) {
                 <div class="card-container">
                     <div class="card card1">
                         <p>Member of Senior Citizen</p>
-                        <h2><i class="fa-solid fa-user"></i></i> 50</h2>
+                        <h2><i class="fa-solid fa-user"></i></i>
+                            <?php 
+                                $id = $_SESSION['userid'];
+                                $sql = "SELECT COUNT(userid) FROM myuser where role='resident';";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                echo $row['COUNT(userid)'];
+                            ?>
+                        </h2>
                     </div>
                     <div class="card card2">
                         <p>Number of Services</p>
