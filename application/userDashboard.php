@@ -147,7 +147,7 @@ if (isset($_POST['submit'])) {
                     </a>
                     <div class="card card3">
                         <p>Time</p>
-                        <h2><i class="fa-solid fa-clock"></i>&nbsp;<span id="clock"></span></h2>
+                        <h2><i class="fa-solid fa-smog"></i>&nbsp;<span id="clock"></span></h2>
                     </div>
                     <div class="card card4">
                         <p>Emergency Situation</p>
@@ -161,7 +161,7 @@ if (isset($_POST['submit'])) {
                                     echo "No";
                                 }
                                 else{
-                                    echo "Yes<br><p style='font-size: 16px; color: red;'>Please go to the admin office immediately!!!</p>";
+                                    echo "Yes<br><p style='font-size: 16px; background-color: #eee; color: red; height: 25px; line-height: 25px; width: 320px;border-radius: 10px; text-align: center;'>Please go to the admin office immediately!</p>";
                                 }
                             ?>
                         </h2>
@@ -200,7 +200,7 @@ if (isset($_POST['submit'])) {
             });
     }
 
-    setInterval(updateDate, 60000);
+    setInterval(updateTime, 60000);
     updateDate(); 
 </script>
 
