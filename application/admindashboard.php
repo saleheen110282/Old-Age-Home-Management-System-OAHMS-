@@ -130,7 +130,15 @@ if (isset($_POST['submit'])) {
                 <div class="dashboard">
                     <h1>Admin Dashboard</h1>
                     <div class="profile">
-                        <p>Hi, Admin!</p>
+                        <p>Hi, 
+                            <?php
+                                $id = $_SESSION['userid'];
+                                $sql = "SELECT username FROM myuser WHERE userid=$id";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                echo $row['username']."!";
+                            ?>
+                        </p>
                         <img src="../assets/img/profile.png" alt="" id="profileImg" style="cursor: pointer;">
                     </div>
                 </div>
@@ -161,12 +169,25 @@ if (isset($_POST['submit'])) {
                         <h2><i class="fa-solid fa-suitcase-medical"></i></i></i> 5</h2>
                     </div>
                     <div class="card card3">
-                        <p>Number of Beds</p>
-                        <h2><i class="fa-solid fa-bed"></i></i></i> 80</h2>
+                        <p>Number of Unallocated Beds</p>
+                        <h2><i class="fa-solid fa-bed"></i>&nbsp;<?php 
+                                $id = $_SESSION['userid'];
+                                $sql = "SELECT COUNT(bed_no) FROM accommodation";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                echo (30*4+30)-$row['COUNT(bed_no)'];
+                            ?></h2>
                     </div>
                     <div class="card card4">
                         <p>Number of Complains</p>
-                        <h2><i class="fa-solid fa-list-ul"></i></i> 10</h2>
+                        <h2><i class="fa-solid fa-list-ul"></i>&nbsp;<?php 
+                                $id = $_SESSION['userid'];
+                                $sql = "SELECT COUNT(complain_id) FROM complain";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                echo "".$row['COUNT(complain_id)'];
+                            ?>
+                    </h2>
                     </div>
                 </div>
                 <div>

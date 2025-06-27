@@ -1,3 +1,8 @@
+<?php
+include "../includes/config.php";
+session_start();
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -84,13 +89,24 @@
 
         <div id="right">
             <div id="main">
-                <div class="accomm">
+                <div class="page_top">
                     <h1>Accommodation</h1>
                     <div class="profile">
-                        <p>Hi, David!</p>
-                        <img src="../assets/img/profile.png" alt="">
+                        <p>Hi, 
+                            <?php
+                                $id = $_SESSION['userid'];
+                                $sql = "SELECT username FROM myuser WHERE userid='$id'";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                echo  $row['username'];
+                            ?>
+                        </p>
+                        <img src="../assets/img/profile.png" alt="" id="profileImg" style="cursor: pointer;">
                     </div>
                 </div>
+                <?php
+                    include('../includes/menu.php');
+                ?>
                 <div class="accommodation-card">
                     <p><i class="fa-solid fa-person-shelter"></i> Room No. : 31</p>
                     <p><i class="fa-solid fa-bed"></i> Bed No. : 3</p>

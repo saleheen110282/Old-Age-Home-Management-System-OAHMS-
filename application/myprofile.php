@@ -118,7 +118,15 @@ if (!isset($_SESSION['userid'])) {
                 <div class="page_top">
                     <h1>My Profile</h1>
                     <div class="profile">
-                        <p>Hi, Admin!</p>
+                        <p>Hi, 
+                            <?php
+                                $id = $_SESSION['userid'];
+                                $sql = "SELECT username FROM myuser WHERE userid='$id'";
+                                $result = mysqli_query($conn, $sql);
+                                $row = mysqli_fetch_assoc($result);
+                                echo  $row['username'];
+                            ?>
+                        </p>
                         <img src="../assets/img/profile.png" alt="" id="profileImg" style="cursor: pointer;">
                     </div>
                 </div>
@@ -170,23 +178,31 @@ if (!isset($_SESSION['userid'])) {
                     </div>
                     <div id="div_right">
                         <table>
+                                <?php
+                                    $id = $_SESSION['userid'];
+                                    $sql = "SELECT * FROM myuser WHERE userid='$id'";
+                                    $result = mysqli_query($conn, $sql);
+                                    $row = mysqli_fetch_assoc($result);
+                                    echo "
                             <tr>
-                                <td>: 65</td>
+                                <td>: $row[age]</td>
                             </tr>
                             <tr>
-                                <td>: America</td>
+                                <td>: $row[nationality]</td>
                             </tr>
                             <tr>
-                                <td>: Software Energineer</td>
+                                <td>: $row[exprofession]</td>
                             </tr>
                             <tr>
-                                <td>: david3342@gmail.com</td>
+                                <td>: $row[email]</td>
                             </tr>
                             <tr>
-                                <td>: Ms. Jennifer (Alive)</td>
-                            </tr>
+                                <td>: $row[careOf]</td>
+                            </tr>";
+                            
+                        ?>
                         </table>
-                        <button type="submit" class="btn">View incidents &gt;</button>
+                        <a href="./incidents.php" style="color: #5A5454; text-decoration: none;">View incidents &gt;</a>
                     </div>
                 </div>
             </div>

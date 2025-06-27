@@ -136,8 +136,8 @@ if (isset($_POST['submit'])) {
                 ?>
                 <div class="card-container">
                     <div class="card card1">
-                        <p>Date</p>
-                        <h2><i class="fa-solid fa-calendar"></i>&nbsp;<span id="date"></span></h2>
+                        <p>Date and Day</p>
+                        <h2><i class="fa-solid fa-calendar"></i>&nbsp;<span id="date"></span>&nbsp;<span id="day"></span></h2>
                     </div>
                     <a href="../notices.php" style="text-decoration: none;">
                         <div class="card card2">
@@ -191,8 +191,9 @@ if (isset($_POST['submit'])) {
     }
 
     setInterval(updateTime, 1000);
-    updateDate(); 
-    function updateDate() {
+    updateTime(); 
+
+        function updateDate() {
         fetch('../includes/date.php')
             .then(response => response.text())
             .then(date => {
@@ -200,8 +201,22 @@ if (isset($_POST['submit'])) {
             });
     }
 
-    setInterval(updateTime, 60000);
+    setInterval(updateDate, 60000);
     updateDate(); 
+
+    function updateDay() {
+        fetch('../includes/day.php')
+            .then(response => response.text())
+            .then(day => {
+                document.getElementById("day").innerText = day;
+            });
+    }
+
+    setInterval(updateday, 60000);
+    updateDay(); 
+
+
+
 </script>
 
 
