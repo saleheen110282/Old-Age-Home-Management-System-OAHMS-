@@ -4,98 +4,101 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Cook Dashboard</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
-        *{
+        * {
             margin: 0px;
             padding: 0px;
             box-sizing: border-box;
         }
-        #container{
-            display : flex;
-        }
-        #right{
-            background-color : #eeeeee;
-        }
-        #main{ 
-            height : 93vh;
+
+        #container {
+            display: flex;
         }
 
-        body {
-        font-family: Arial, sans-serif;
+        #right {
+            background-color: #eeeeee;
+            width: 75vw;
+            height: 100vh;
+            overflow-y: scroll;
         }
 
-        .container {
-        max-width: 700px;
-        margin: auto;
-        }
-
-        .header {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        }
-
-        .header h1 {
-        font-size: 28px;
-        }
-
-        .profile {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        }
-
-        .profile img {
-        width: 40px;
-        height: 40px;
-        border-radius: 50%;
+        #main {
+            margin: 20px 60px;
         }
 
         .dashboard {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 20px;
-        margin-top: 30px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            color: #5A5454;
         }
 
-        .card {
-        background-color: #ffffff;
-        padding: 20px;
-        border-radius: 12px;
-        text-align: center;
-        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
-        color: white;
+        .dashboard h1 {
+            font-size: 40px;
         }
 
-        .green {
-        background-color: #33CE9F;
+        .profile {
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .orange {
-        background-color: #FFAE7C;
+        .profile img {
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            margin-left: 20px;
         }
 
-        .purple {
-        background-color: #C5ACFF;
+        .profile p {
+            font-size: 20px;
         }
 
-        .card .title {
-        font-size: 14px;
-        margin-bottom: 10px;
+        .card-container {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 40px;
+            justify-content: space-between;
+            margin-top: 20px;
+            padding: 30px;
+            text-align: center;
         }
 
-        .card .icon {
-        font-size: 24px;
-        margin-bottom: 5px;
+        .card-container .card {
+            color: #fff;
+            border-radius: 5px;
+            padding: 40px 30px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
         }
 
-        .card .number {
-        font-size: 22px;
-        font-weight: bold;
+        .card-container .card1 {
+            background-color: #33CE9F;
         }
 
+        .card-container .card2 {
+            background-color: #FFAE7C;
+        }
 
+        .card-container .card3 {
+            background-color: #FF8952;
+        }
 
+        .card-container .card4 {
+            background-color: #C5ACFF;
+        }
+
+        .card-container .card p {
+            font-size: 20px;
+            margin-bottom: 10px;
+            font-weight: 200;
+        }
+
+        .card-container .card h2 {
+            font-size: 38px;
+            margin-top: 10px;
+            font-weight: 400;
+        }
     </style>
 </head>
 <body>
@@ -106,58 +109,37 @@
 
     <div id="right">
         <div id="main">
-
-
-
-        
-        <div class="container">
-            <div class="header">
-            <h1>Cook Dashboard</h1>
-            <div class="profile">
-                <span>Hi Cook!</span>
-                <img src="../assets/img/profile.png" alt="Cook Image">
-            </div>
-            </div>
-
             <div class="dashboard">
-            <div class="card green">
-                <p class="title">Number of Food Request</p>
-                <p class="icon">👤</p>
-                <p class="number">34</p>
+                <h1>Cook Dashboard</h1>
+                <div class="profile">
+                    <p>Hi, Cook!</p>
+                    <img src="../assets/img/profile.png" alt="" id="profileImg" style="cursor: pointer;">
+                </div>
             </div>
 
-            <div class="card orange">
-                <p class="title">Full Day Meal</p>
-                <p class="icon">👤</p>
-                <p class="number">23</p>
+            <div class="card-container">
+                <div class="card card1">
+                    <p>Number of Food Request</p>
+                    <h2><i class="fa-solid fa-utensils"></i>&nbsp;34</h2>
+                </div>
+
+                <div class="card card2">
+                    <p>Full Day Meal</p>
+                    <h2><i class="fa-solid fa-bowl-food"></i>&nbsp;23</h2>
+                </div>
+
+                <div class="card card3">
+                    <p>Satisfied Consumer</p>
+                    <h2><i class="fa-solid fa-face-smile"></i>&nbsp;36</h2>
+                </div>
+
+                <div class="card card4">
+                    <p>Food Complain</p>
+                    <h2><i class="fa-solid fa-file-pen"></i>&nbsp;5</h2>
+                </div>
             </div>
-
-            <div class="card orange">
-                <p class="title">Satisfied Consumer</p>
-                <p class="icon">👤</p>
-                <p class="number">36</p>
-            </div>
-
-            <div class="card purple">
-                <p class="title">Food Complain</p>
-                <p class="icon">🧾</p>
-                <p class="number">5</p>
-            </div>
-            </div>
-        </div>
-
-
-
-        </div>
-        <div id="footer">
-        <?php
-                include_once('../includes/applicationfooter.php');
-        ?>
         </div>
     </div>
 </div>   
-
-
-
 </body>
 </html>
