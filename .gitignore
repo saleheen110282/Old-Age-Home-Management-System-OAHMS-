@@ -1,0 +1,32 @@
+# Python cache
+__pycache__/
+*.pyc
+*.py
+
+# Virtual environment
+venv/
+.venv/
+
+# Environment variables
+.env
+
+# Log files
+*.log
+
+# Jupyter Notebook checkpoints
+.ipynb_checkpoints/
+
+# Temporary files
+temp/
+tmp/
+
+# IDE
+.vscode/
+
+# Operating system
+.DS_Store
+Thumbs.db
+
+# Local database files
+*.db
+*.sql
